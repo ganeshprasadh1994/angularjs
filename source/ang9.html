@@ -1,0 +1,46 @@
+<html ng-app="app9" ng-cloak>
+<head>
+  <title> Example 9</title>
+  <style>
+  [ng\:cloak],[ng-cloak], .ng-cloak{
+    display:none;
+  }
+  .thick{
+    font-weight:bold;
+  }
+  </style>
+</head>
+<body>
+  <div ng-controller="mainCtrl">
+    <ul jql-directive>
+      <li id="barry">Barry Allen</li>
+      <ul>
+        <li>AVG: .298
+        <li>HR: 762
+        <li>OBP: .444
+      </ul>
+      <li id="shank">Shank Dorai</li>
+      <ul>
+        <li>AVG: .305
+        <li>HR : 755
+        <li>OBP : .444
+      </ul>
+      <li id="gany">Gany Blaze</li>
+      <ul>
+        <li>AVG: .342
+        <li>HR : 714
+        <li>OBP: .474
+      </ul>
+    </ul>
+  <h4>List</h4>
+  <span id="childrenList"></span><br><br>
+  Barry's Number: <span id="barrysNum"></span><br><br>
+  Is Shank Bold: <span id="shankBold"></span><br><br>
+  Barry's ID:<span id="barryID"></span><br><br>
+  Is Gany Italic:<span id="ganyItalic"></span><br><br>
+  <button ng-click="unBold()">Toggle Bold</button>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="../js/ang9.js"></script>
+  </body>
+</html>

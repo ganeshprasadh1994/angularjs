@@ -1,0 +1,46 @@
+<html ng-app="app9" ng-cloak>
+<head>
+  <title> Filter Example</title>
+</head>
+<body>
+
+<div ng-init="bikes=[{name:'Hayabusa',make:'Suzuki',color:'white'},
+                     {name:'CBR1000',make:'Honda',color:'black'},
+                     {name:'RSV4',make:'Aprilla',color:'white'},
+                     {name:'CBR1100',make:'Honda',color:'white'},
+                     {name:'R3',make:'Yamaha',color:'black'},
+                     {name:'R15',make:'Blue',color:'blue' }]"></div>
+                     <script>
+                       angular.module('checkboxExample', [])
+                         .controller('ExampleController', ['$scope', function($scope) {
+                           $scope.checkboxModel = {
+                            value1 : true,
+                            value2 : true,
+                            value3 : true
+                          };
+                         }]);
+                     </script>
+                     <form name="myForm" ng-controller="ExampleController">
+                       <label>Blue:
+                         <input type="checkbox" ng-model="checkboxModel.value1">
+                       </label><br/>
+                       <label>White:
+                         <input type="checkbox" ng-model="checkboxModel.value2">
+                       </label><br/>
+                        <label>Black:
+                          <input type="checkbox" ng-model="checkboxModel.value3">
+                        </label><br/>
+
+                       <tt>value1 = {{checkboxModel.value1}}</tt><br/>
+                       <tt>value2 = {{checkboxModel.value2}}</tt><br/>
+                       <tt>value3 = {{checkboxMode1.value3}}</tt><br/>
+                      </form>
+<table id="searchTextResults">
+  <tr><th>Name</th><th>Color</th></tr>
+  <tr ng-repeat="bike in bikes | filter:{color:checkboxMode1.}">
+    <td>{{bike.name}}</td>
+    <td>{{bike.color}}</td>
+  </tr>
+</table>
+</div>
+<label>
