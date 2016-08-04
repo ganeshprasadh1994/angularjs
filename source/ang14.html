@@ -1,0 +1,50 @@
+<html ng-app="app14" ng-cloak>
+<head>
+  <title>Exercise 14</title>
+  <style>
+  [ng\:cloak],[ng-cloak], .ng-cloak{
+    display:none;
+  }
+  .thick{
+    font-weight:bold;
+  }
+  </style>
+</head>
+<body>
+  <div ng-controller="mainCtrl">
+    <input type="text" ng-model="userName" />
+    <button ng-click="greetUser(userName)">Hello</button>
+    <br><br>
+
+    URL : {{currURL}}<br><br>
+    Protocol: {{theProtocol}}<br><br>
+    Host: {{currHost}} <br><br>
+    Port: {{currPort}} <br><br>
+    Path: {{currPath}} <br><br>
+    Search: {{currSearch}} <br><br>
+
+    Current Time:{{time}} <br><br>
+
+    <label>Message:
+      <input type="text" ng-model="message" /></label>
+      <button ng-click="$log.log(message)">Warn</button>
+      <button ng-click="$log.warn(message)">Info</button>
+      <button ng-click="$log.info(message)">Error</button>
+      <button ng-click="$log.error(message)">Error</button>
+      <button ng-click="$log.debug(message)">Debug</button>
+<br><br>
+    <button ng-click="throwException()"> Throw Exception </button>
+    <br><br>
+
+    <input type="text" ng-model="badStuff"></span>
+    <br><br>
+    <span ng-bind-html="badStuff"></span>
+    <span ng-bind="badStuff"></span>
+    <br>
+
+    <p get-player-info></p>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.4.9/angular-sanitize.js"></script>  <script src="../js/ang14.js"></script>
+  </body>
+</html>

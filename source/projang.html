@@ -1,0 +1,51 @@
+<html ng-app="proj" ng-cloak>
+<head>
+  <title>Crime Project</title>
+  <style>
+  [ng\:cloak],[ng-cloak], .ng-cloak{
+    display:none;
+  }
+  .thick{
+    font-weight:bold;
+  }
+  </style>
+</head>
+<body>
+  <div ng-controller="myCtrl">
+          <label>year</label>
+          <select ng-model="year">
+          <option ng-repeat="x in year">{{x}}</option>
+          </select>
+
+          <br><br>
+          <form name="userValid">
+          <label>Theft you need</label>
+          <select ng-model="theft">
+          <option>Over $500</option>
+          <option>Under $500</option>
+          </select>
+
+          <label>Enter the Value</label>
+          <input type="text" name="values" ng-model="fvalue"
+          ng-required="true" ng-minlength="4"/>
+
+          <span class="error-message" ng-show="userValid.values.$dirty
+          && userValid.values.$error.minlength">Must be a Minimum of 4 Characters</span>
+
+          <br><br>
+          <button ng-click="validSearch(year,theft,fvalue)">SEARCH</button>
+        </form>
+
+
+
+
+
+
+
+
+
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+  <script src="../js/projang.js"></script>
+</body>
+</html>
